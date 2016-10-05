@@ -3,12 +3,6 @@
 
   Controller.$inject = ['$element'];
 
-  /**
-   * Controller
-   *
-   * @class Controller
-   * @constructor
-   */
   function Controller($element) {
 
     var ctrl = this;
@@ -21,8 +15,7 @@
 
         'controls': true,
         'autoplay': false,
-        'preload': 'auto',
-        'example_option': true
+        'preload': 'auto'
 
       }, function () {
 
@@ -50,12 +43,12 @@
 
     ctrl.$onInit = function () {
 
-      videoElementId =  'video-' + ctrl.id;
+      videoElementId = 'video-' + ctrl.id;
 
-      var elem =  $element.find('video');
-      elem.attr('id' , videoElementId);
-      elem.attr('height' , ctrl.h);
-      elem.attr('width' , ctrl.w);
+      var elem = $element.find('video');
+      elem.attr('id', videoElementId);
+      elem.attr('height', ctrl.h);
+      elem.attr('width', ctrl.w);
 
     };
 
@@ -67,11 +60,6 @@
 
   }
 
-  /**
-   * Video Component module.
-   *
-   * @module videojscomponent.components.home
-   */
   angular
     .module('videojscomponent.components.video', [])
     .component('videoComponent', {
