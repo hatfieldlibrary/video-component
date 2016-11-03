@@ -1,4 +1,5 @@
 (function () {
+
   'use strict';
 
   Controller.$inject = ['$element'];
@@ -61,7 +62,7 @@
   }
 
   angular
-    .module('videojscomponent.components.video', [])
+    .module('VideoComponent', [])
     .component('videoComponent', {
       bindings: {
         title: '@',
